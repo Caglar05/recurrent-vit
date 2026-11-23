@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "recurrent-vit"
+version = "0.1.0"
+description = "Single-block recurrent Vision Transformers (bViT, reViT) and their ViT / DeiT III baselines, trained on ImageNet-1k"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Caglar Dag" }]
+requires-python = ">=3.11"
+keywords = ["vision transformer", "recurrence", "weight sharing", "mixture of experts", "imagenet", "pytorch"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = ["torch>=2.4", "torchvision", "timm>=1.0", "pyarrow", "pillow", "wandb"]
+
+[project.optional-dependencies]
+test = ["pytest"]
+dev = ["pytest", "ruff"]
+
+[project.urls]
+Repository = "https://github.com/Caglar05/recurrent-vit"
+"bViT paper" = "https://arxiv.org/abs/2605.10661"
+"reViT paper" = "https://arxiv.org/abs/2610.12448"
+
+[tool.setuptools.packages.find]
+include = ["rvit*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]

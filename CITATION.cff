@@ -1,0 +1,47 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite it as below, together with the bViT and reViT papers."
+title: "recurrent-vit: single-block recurrent Vision Transformers (bViT, reViT) in PyTorch"
+authors:
+  - family-names: Dag
+    given-names: Caglar
+repository-code: "https://github.com/Caglar05/recurrent-vit"
+license: MIT
+version: 0.1.0
+date-released: "2026-11-23"
+keywords:
+  - vision transformer
+  - recurrence
+  - weight sharing
+  - mixture of experts
+  - imagenet
+references:
+  - type: article
+    title: "Investigating Single-Block Recurrence in Vision Transformers for Image Recognition"
+    authors:
+      - family-names: Byra
+        given-names: Michal
+      - family-names: Olszowiec
+        given-names: Pawel
+      - family-names: Stefanski
+        given-names: Grzegorz
+      - family-names: Gruszczynski
+        given-names: Grzegorz
+      - family-names: Presta
+        given-names: Alberto
+    year: 2026
+    identifiers:
+      - type: other
+        value: "arXiv:2605.10661"
+  - type: article
+    title: "One Block, Multiple Depths: Recurrent Vision Transformers with Depth-Programmed Experts"
+    authors:
+      - family-names: Bulat
+        given-names: Adrian
+      - family-names: Ouali
+        given-names: Yassine
+      - family-names: Tzimiropoulos
+        given-names: Georgios
+    year: 2026
+    identifiers:
+      - type: other
+        value: "arXiv:2610.12448"
